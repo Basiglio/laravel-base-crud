@@ -8,12 +8,12 @@ use App\Beer;
 
 class HomeController extends Controller
 {
-    public function index() {
-
+    public function index()
+    {
         // QUI SALVO (TUTTO) IL DATABASE IN UNA VARABILE
-        $beers = Beer::all();
+    $beers = Beer::all();
 
-        // QUI METTO LA CALLBACK CON IL RETURN DELLA MIA PAGINA E DEL DATABASE
-        return view('home', compact('beers'));
+    // QUI METTO LA CALLBACK CON IL RETURN DELLA MIA PAGINA E DEL DATABASE
+    return view('home', compact('beers'));
     }
 }

@@ -15,6 +15,7 @@
     <table class="table table-dark">
       <thead>
         <tr>
+          <td>POSIZIONE ARRAY</td>
           <td>ID</td>
           <td>NOME</td>
           <td>PRODUTTORE</td>
@@ -23,12 +24,13 @@
         </tr>
       </thead>
       <tbody>
-        @foreach ($beers as $beer)
+        @foreach ($beers as $key => $beer)
             <tr>
+              <td>{{$key}}</td>
               <td>{{$beer->id}}</td>
               <td>{{$beer->name}}</td>
               <td>{{$beer->producer}}</td>
-              <td>{{$beer->price}}</td>
+              <td>{{$beer->price}} €</td>
               <td>{{$beer->grade}}</td>
             </tr>
             @endforeach
