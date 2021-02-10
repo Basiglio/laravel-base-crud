@@ -6,8 +6,6 @@
       <table class="table table-dark">
         <thead>
           <tr>
-            <td>POSIZIONE ARRAY</td>
-            <td>ID</td>
             <td>NOME</td>
             <td>PRODUTTORE</td>
             <td>PREZZO</td>
@@ -16,7 +14,6 @@
         </thead>
         <tbody>
               <tr>
-                <td>{{$beers->id}}</td>
                 <td>{{$beers->name}}</td>
                 <td>{{$beers->producer}}</td>
                 <td>{{$beers->price}} €</td>
@@ -24,5 +21,6 @@
               </tr>
         </tbody>
       </table>
+      <a href="{{route('beers.index')}}" class="btn btn-warning" id="back_btn">INDIETRO</a>
     </div>
 @endsection
