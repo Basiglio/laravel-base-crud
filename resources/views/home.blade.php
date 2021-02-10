@@ -12,12 +12,28 @@
 </head>
 <body>
   <div class="container">
-    <h1>ciao</h1>
-    <h2>ciao 2</h2>
-
-  @php
-      dump($beers);
-  @endphp
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td>NOME</td>
+          <td>PRODUTTORE</td>
+          <td>PREZZO</td>
+          <td>GRADi</td>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach ($beers as $beer)
+            <tr>
+              <td>{{$beer->id}}</td>
+              <td>{{$beer->name}}</td>
+              <td>{{$beer->producer}}</td>
+              <td>{{$beer->price}}</td>
+              <td>{{$beer->grade}}</td>
+            </tr>
+            @endforeach
+      </tbody>
+    </table>
   </div>
 </body>
 </html>
