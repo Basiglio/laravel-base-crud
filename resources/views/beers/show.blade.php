@@ -24,7 +24,6 @@
         </tr>
       </thead>
       <tbody>
-        @foreach ($beers as $key => $beer)
             <tr>
               <td>{{$key}}</td>
               <td>{{$beer->id}}</td>
@@ -32,11 +31,8 @@
               <td>{{$beer->producer}}</td>
               <td>{{$beer->price}} €</td>
               <td>{{$beer->grade}}</td>
-              <td>
-                <a href="{{roote('beers.show', ['id' => $beer->id])}}" class="btn">MOSTRA</a>
-              </td>
+              
             </tr>
-            @endforeach
       </tbody>
     </table>
   </div>

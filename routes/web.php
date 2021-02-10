@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','HomeController@index');
+// Route::get('/','HomeController@index');
 
 // QUESTO CREA TUTTE LE ROTTE
 Route::resource('beers','BeerController');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Beer;
 
 
 class BeerController extends Controller
@@ -14,7 +15,8 @@ class BeerController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $beers = Beer::all();
+        return view('beers.index', compact('beers'));
     }
 
     /**
@@ -46,7 +48,11 @@ class BeerController extends Controller
      */
     public function show($id)
     {
-        //
+       $beers = Beer::find($id);
+       dump($beers);
+
+        // return view('beers.show', compact('beers'));
+
     }
 
     /**
