@@ -49,9 +49,8 @@ class BeerController extends Controller
     public function show($id)
     {
        $beers = Beer::find($id);
-       dump($beers);
-
-        // return view('beers.show', compact('beers'));
+       
+        return view('beers.show', compact('beers'));
 
     }
 

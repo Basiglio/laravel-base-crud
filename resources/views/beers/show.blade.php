@@ -25,13 +25,12 @@
       </thead>
       <tbody>
             <tr>
-              <td>{{$key}}</td>
-              <td>{{$beer->id}}</td>
-              <td>{{$beer->name}}</td>
-              <td>{{$beer->producer}}</td>
-              <td>{{$beer->price}} €</td>
-              <td>{{$beer->grade}}</td>
-              
+              {{-- <td>{{$key}}</td> --}}
+              <td>{{$beers->id}}</td>
+              <td>{{$beers->name}}</td>
+              <td>{{$beers->producer}}</td>
+              <td>{{$beers->price}} €</td>
+              <td>{{$beers->grade}}</td>
             </tr>
       </tbody>
     </table>

@@ -33,7 +33,7 @@
               <td>{{$beer->price}} €</td>
               <td>{{$beer->grade}}</td>
               <td>
-                <a href="{{route('beers.show', ['beer' => $beer->id])}}" class="btn">MOSTRA</a>
+                <a href="{{route('beers.show', ['beer' => $key])}}" class="btn">MOSTRA</a>
               </td>
             </tr>
             @endforeach
