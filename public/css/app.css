@@ -10004,3 +10004,7 @@ h3 {
     border-color: #dee2e6;
   }
 }
+h1 {
+  text-align: center;
+  margin: 100px 0px;
+}
