@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('', function () {
   return view('home');
-});
+})->name('home');
   
 // QUESTO CREA TUTTE LE ROTTE
 Route::resource('beers','BeerController');

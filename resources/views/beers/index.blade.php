@@ -31,5 +31,6 @@
             @endforeach
       </tbody>
     </table>
+    <a href="{{route('home')}}" class="btn btn-danger">lascia console amministratore</a>
   </div>
 @endsection
