@@ -12,33 +12,9 @@
 </head>
 <body>
   <div class="container">
-    <table class="table table-dark">
-      <thead>
-        <tr>
-          <td>POSIZIONE ARRAY</td>
-          <td>ID</td>
-          <td>NOME</td>
-          <td>PRODUTTORE</td>
-          <td>PREZZO</td>
-          <td>GRADi</td>
-        </tr>
-      </thead>
-      <tbody>
-        @foreach ($beers as $key => $beer)
-            <tr>
-              <td>{{$key}}</td>
-              <td>{{$beer->id}}</td>
-              <td>{{$beer->name}}</td>
-              <td>{{$beer->producer}}</td>
-              <td>{{$beer->price}} €</td>
-              <td>{{$beer->grade}}</td>
-              <td>
-                <a href="{{roote('beers.show', ['id' => $beer->id])}}" class="btn">MOSTRA</a>
-              </td>
-            </tr>
-            @endforeach
-      </tbody>
-    </table>
+    <h1>LA MIA BIRRERIA</h1>
+    <h2>entra come amministratore</h2>
+    <h3>--><a href="{{route('beers.index')}}">clicca qui</a><--</h3>
   </div>
 </body>
 </html>

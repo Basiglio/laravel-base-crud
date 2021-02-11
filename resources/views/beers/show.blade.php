@@ -14,10 +14,10 @@
         </thead>
         <tbody>
               <tr>
-                <td>{{$beers->name}}</td>
-                <td>{{$beers->producer}}</td>
-                <td>{{$beers->price}} €</td>
-                <td>{{$beers->grade}}</td>
+                <td>{{$beer->name}}</td>
+                <td>{{$beer->producer}}</td>
+                <td>{{$beer->price}} €</td>
+                <td>{{$beer->grade}}</td>
               </tr>
         </tbody>
       </table>

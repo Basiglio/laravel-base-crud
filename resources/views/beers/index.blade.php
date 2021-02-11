@@ -2,8 +2,6 @@
 
 
 @section('content')
-    
-
   <div class="container">
     <table class="table table-dark">
       <thead>
@@ -26,6 +24,7 @@
               <td>{{$beer->price}} €</td>
               <td>{{$beer->grade}}</td>
               <td>
+                {{-- AL CLICK SUL LINK PASSA L'ID DEL PRODOTTO ALLA QUERY --}}
                 <a href="{{route('beers.show', ['beer' => $key])}}" class="btn btn-warning">MOSTRA</a>
               </td>
             </tr>

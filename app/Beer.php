@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Beer extends Model
 {
-    // INSERISCO LE COLONNE MODIFICABILI
+    // INSERISCO GLI ELEMENTI MODIFICABILI
     protected $fillable = [
         "id",
         "name",
