@@ -42,6 +42,14 @@ class BeerController extends Controller
         // DATA è UNA CONVENZIONE
         $data = $request->all();
 
+        // DEFINISCO LA VALIDAZIONE
+        $request -> validate([
+            'name' => 'required',
+            'producer' => 'required',
+            'price' => 'required',
+            'grade' => 'required'
+        ]);
+
         // CREO NUOVO OGGETT DI CLASSE BEER
         $newBeer = new Beer;
         // ASSOCIO I DATI PRESI DAL FORM ALLE CHIAVI DEL DATABASE
@@ -53,7 +61,7 @@ class BeerController extends Controller
         $newBeer -> save();
 
         // FACCIO IL RETURN SULLA VISTA DELL'ELENCO DELLE BIRRE
-        return redirect() -> route('beers.index'); 
+        return redirect() -> route('beers.show', $newBeer); 
     }
 
     /**
