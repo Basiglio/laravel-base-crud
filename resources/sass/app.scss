@@ -7,12 +7,18 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-
-
-h1, h2, h3 {
+body {
+  background-color: #AB4514;
+}
+h1 {
   text-align: center;
   margin: 100px 0px;
-  color: orange;
+  color: #FEE925;
+}
+h2, h3 {
+  text-align: center;
+  margin: 100px 0px;
+  color: #FEE925;
 }
 
 #back_btn {

@@ -12,8 +12,8 @@
 </head>
 <body class="menu_admin">
   <div class="box">
-    <h1>LA MIA BIRRERIA</h1>
-    <h2>entra come amministratore</h2>
+    <h2>LA MIA BIRRERIA</h2>
+    <h2>ENTRA COME AMMINISTRATORE</h2>
     <h3>--><a href="{{route('beers.index')}}">clicca qui</a><--</h3>
   </div>
 </body>

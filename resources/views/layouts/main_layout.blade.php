@@ -14,11 +14,8 @@
 
 
 
-  <header>
-    <div class="container">
-      <h1>Le Mie Birre</h1>
-    </div>
-  </header>
+  @yield('header')
+ 
 
 
 

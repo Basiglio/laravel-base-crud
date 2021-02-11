@@ -1,6 +1,14 @@
 @extends('layouts/main_layout')
 
 
+@section('header')
+     <header>
+    <div class="container">
+      <h1>Descrizione Birra: {{$beer->name}}</h1>
+    </div>
+  </header>
+@endsection
+
 @section('content')
     <div class="container">
       <table class="table table-dark">
@@ -9,7 +17,7 @@
             <td>NOME</td>
             <td>PRODUTTORE</td>
             <td>PREZZO</td>
-            <td>GRADi</td>
+            <td>GRADI</td>
           </tr>
         </thead>
         <tbody>

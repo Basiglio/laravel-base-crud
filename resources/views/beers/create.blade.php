@@ -1,6 +1,12 @@
 @extends('layouts/main_layout')
 
-
+@section('header')
+     <header>
+    <div class="container">
+      <h1>Aggiungi Birra</h1>
+    </div>
+  </header>
+@endsection
 
 
 @section('content')
