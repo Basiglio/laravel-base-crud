@@ -12,9 +12,25 @@
 h1, h2, h3 {
   text-align: center;
   margin: 100px 0px;
+  color: orange;
 }
 
 #back_btn {
   position: relative;
   left: 45%;
+}
+
+.box {
+  width: 50%;
+  height: 50%;
+  border: 1px solid black;
+  margin-top: 200px;
+  margin-left: 50px;
+  background-color: rgba(000, 000, 000, 0.5);
+}
+
+.menu_admin {
+  background-image: url('https://images.squarespace-cdn.com/content/v1/57cf20e5e4fcb5e71aa49c63/1494491981786-MWTK2LJADZMBDCRUKC9O/ke17ZwdGBToddI8pDm48kP8vBXTKsKbKig5xOF_Dllx7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1Ua9nFmCg1khOdFQuAB2QoZwZzbvuhXv1qlIvigxb8OrJlotzjZwTJcqBZZbgS9G89A/1370512048.jpg?format=2500w');
+  display: flex;
+  justify-content: flex-start;
 }
