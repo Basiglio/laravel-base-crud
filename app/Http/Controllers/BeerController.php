@@ -38,17 +38,21 @@ class BeerController extends Controller
      */
     public function store(Request $request)
     {
-        // ASSOCIO I DATI PRESI DAL FORM ALLE CHIAVI DEL DATABASE
+        
+        // DATA è UNA CONVENZIONE
         $data = $request->all();
 
+        // CREO NUOVO OGGETT DI CLASSE BEER
         $newBeer = new Beer;
+        // ASSOCIO I DATI PRESI DAL FORM ALLE CHIAVI DEL DATABASE
         $newBeer -> name =  $data['name'];
         $newBeer -> producer =  $data['producer'];
         $newBeer -> price =  $data['price'];
         $newBeer -> grade =  $data['grade'];
+        // SALVO I DATI NEL DATABASE
         $newBeer -> save();
 
-
+        // FACCIO IL RETURN SULLA VISTA DELL'ELENCO DELLE BIRRE
         return redirect() -> route('beers.index'); 
     }
 

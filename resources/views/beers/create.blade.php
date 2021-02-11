@@ -5,9 +5,13 @@
 
 @section('content')
 <div class="container">
+  {{-- LA PRESSIONE DEL SUBMIT RITORNA I MIEI DATI ALL ROUTE STORE CHE ELABORA I DATI E LI SALVA NEL DATABASE --}}
   <form action="{{route('beers.store')}}" method="post">
+    {{-- TOKEN DI SICUREZZA --}}
     @csrf
+    {{-- METODO DELLA CHIAMATA --}}
     @method('POST')
+    
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="name">Nome</label>
