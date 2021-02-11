@@ -6,7 +6,7 @@
     <table class="table table-dark">
       <thead>
         <tr>
-          <td>POSIZIONE ARRAY</td>
+          {{-- <td>POSIZIONE ARRAY</td> --}}
           <td>ID</td>
           <td>NOME</td>
           <td>PRODUTTORE</td>
@@ -17,7 +17,7 @@
       <tbody>
         @foreach ($beers as $key => $beer)
             <tr>
-              <td>{{$key}}</td>
+              {{-- <td>{{$key}}</td> --}}
               <td>{{$beer->id}}</td>
               <td>{{$beer->name}}</td>
               <td>{{$beer->producer}}</td>
@@ -32,5 +32,6 @@
       </tbody>
     </table>
     <a href="{{route('home')}}" class="btn btn-danger">lascia console amministratore</a>
+    <a href="{{route('beers.create')}}" class="btn btn-primary">Aggiungi Birra</a>
   </div>
 @endsection
