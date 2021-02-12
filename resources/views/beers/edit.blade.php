@@ -3,7 +3,7 @@
 @section('header')
      <header>
     <div class="container">
-      <h1>Aggiungi Birra</h1>
+      <h1>Modifica Birra</h1>
     </div>
   </header>
 @endsection
@@ -24,30 +24,30 @@
   @endif
 
   {{-- LA PRESSIONE DEL SUBMIT RITORNA I MIEI DATI ALL ROUTE STORE CHE ELABORA I DATI E LI SALVA NEL DATABASE --}}
-  <form action="{{route('beers.store')}}" method="post">
+  <form action="{{route('beers.update', $beer)}}" method="post">
     {{-- TOKEN DI SICUREZZA --}}
     @csrf
     {{-- METODO DELLA CHIAMATA --}}
-    @method('POST')
+    @method('PUT')
 
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="name">Nome</label>
-        <input type="text" class="form-control" name="name" id="name" placeholder="Inserisci Nome Birra" value="{{old('name')}}">
+        <input type="text" class="form-control" name="name" id="name" placeholder="Inserisci Nome Birra" value="{{$beer->name}}">
       </div>
       <div class="form-group col-md-6">
         <label for="producer">Produttore</label>
-        <input type="text" class="form-control" name="producer" id="producer" placeholder="Inserisci Nome Produttore" value="{{old('producer')}}">
+        <input type="text" class="form-control" name="producer" id="producer" placeholder="Inserisci Nome Produttore" value="{{$beer->producer}}">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="price">Prezzo</label>
-        <input type="number" step="0.01" class="form-control" name="price" id="price" placeholder="Inserisci il prezzo" value="{{old('price')}}">
+        <input type="number" step="0.01" class="form-control" name="price" id="price" placeholder="Inserisci il prezzo" value="{{$beer->price}}">
       </div>
       <div class="form-group col-md-6">
         <label for="grade">Gradi</label>
-        <input type="number" step="0.01" class="form-control" name="grade" id="grade" placeholder="Inserisci il numero dei gradi" value="{{old('grade')}}">
+        <input type="number" step="0.01" class="form-control" name="grade" id="grade" placeholder="Inserisci il numero dei gradi" value="{{$beer->grade}}">
       </div>
     </div>
     <button type="submit" class="btn btn-primary">Salva</button>

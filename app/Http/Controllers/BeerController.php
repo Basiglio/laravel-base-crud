@@ -84,9 +84,10 @@ class BeerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Beer $beer)
     {
-        //
+        /// PASSO LA VISTA DELLA MODIFICA
+        return view('beers.edit', compact('beer'));
     }
 
     /**
@@ -96,9 +97,21 @@ class BeerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Beer $beer)
     {
-        //
+
+        $request -> validate([
+            'name' => 'required|max:10',
+            'producer' => 'required',
+            'price' => 'required',
+            'grade' => 'required'
+        ]);
+
+        $data = $request->all();
+        $beer -> update($data);
+
+        return redirect() -> route('beers.show', $beer)->with('message', 'Birra aggiornata correttamente');
+
     }
 
     /**
@@ -107,8 +120,11 @@ class BeerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Beer $beer)
     {
-        //
+        $beer -> delete();
+        
+
+        return redirect() -> route('beers.index')->with('message', 'Birra cancellata corretamente');
     }
 }
